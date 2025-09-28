@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البرنامج الزمني الجامعي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Animated Background -->
+        <div class="bg-animation">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="app-title" id="appTitle">البرنامج الزمني الجامعي</h1>
+                    <div class="language-selector">
+                        <select id="languageSelect" class="form-control language-select">
+                            <option value="ar">العربية</option>
+                            <option value="fr">Français</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container">
+                <!-- Current Time Section -->
+                <section class="time-section">
+                    <div class="glass-card time-card">
+                        <h2 class="section-title" id="currentTimeTitle">الوقت الحالي</h2>
+                        <div class="current-time" id="currentTime">00:00:00</div>
+                        <div class="current-date" id="currentDate"></div>
+                    </div>
+                </section>
+
+                <!-- Today's Schedule & Next Class -->
+                <section class="today-section">
+                    <div class="today-grid">
+                        <!-- Today's Schedule -->
+                        <div class="glass-card today-schedule">
+                            <h2 class="section-title" id="todayScheduleTitle">جدول اليوم</h2>
+                            <div class="schedule-list" id="todaySchedule">
+                                <!-- Dynamic content -->
+                            </div>
+                        </div>
+
+                        <!-- Next Class Timer -->
+                        <div class="glass-card next-class">
+                            <h2 class="section-title" id="nextClassTitle">الحصة التالية</h2>
+                            <div class="next-class-content" id="nextClassContent">
+                                <div class="next-class-name" id="nextClassName">لا توجد حصص اليوم</div>
+                                <div class="countdown-timer" id="countdownTimer">
+                                    <div class="timer-unit">
+                                        <span class="timer-number" id="hours">00</span>
+                                        <span class="timer-label">ساعة</span>
+                                    </div>
+                                    <div class="timer-unit">
+                                        <span class="timer-number" id="minutes">00</span>
+                                        <span class="timer-label">دقيقة</span>
+                                    </div>
+                                    <div class="timer-unit">
+                                        <span class="timer-number" id="seconds">00</span>
+                                        <span class="timer-label">ثانية</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weekly Schedule -->
+                <section class="weekly-section">
+                    <h2 class="section-title" id="weeklyScheduleTitle">الجدول الأسبوعي</h2>
+                    <div class="weekly-grid">
+                        <!-- Sunday -->
+                        <div class="glass-card day-card" data-day="sunday">
+                            <h3 class="day-title" id="sundayTitle">الأحد</h3>
+                            <div class="day-schedule" id="sundaySchedule"></div>
+                        </div>
+                        
+                        <!-- Monday -->
+                        <div class="glass-card day-card" data-day="monday">
+                            <h3 class="day-title" id="mondayTitle">الإثنين</h3>
+                            <div class="day-schedule" id="mondaySchedule"></div>
+                        </div>
+                        
+                        <!-- Tuesday -->
+                        <div class="glass-card day-card" data-day="tuesday">
+                            <h3 class="day-title" id="tuesdayTitle">الثلاثاء</h3>
+                            <div class="day-schedule" id="tuesdaySchedule"></div>
+                        </div>
+                        
+                        <!-- Wednesday -->
+                        <div class="glass-card day-card" data-day="wednesday">
+                            <h3 class="day-title" id="wednesdayTitle">الأربعاء</h3>
+                            <div class="day-schedule" id="wednesdaySchedule"></div>
+                        </div>
+                        
+                        <!-- Thursday -->
+                        <div class="glass-card day-card" data-day="thursday">
+                            <h3 class="day-title" id="thursdayTitle">الخميس</h3>
+                            <div class="day-schedule" id="thursdaySchedule"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>© 2025  تيري برك زعما مبرمج </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
